@@ -6,10 +6,9 @@
 
 :warning: UNDER ACTIVE AND RAPID DEVELOPMENT (MAY BE BUGGY AND UNTESTED)
 
-![Tests status](https://github.com/andreibondarev/langchainrb/actions/workflows/ci.yml/badge.svg)
-[![Gem Version](https://badge.fury.io/rb/langchainrb.svg)](https://badge.fury.io/rb/langchainrb)
-[![Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://rubydoc.info/gems/langchainrb)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/andreibondarev/langchainrb/blob/main/LICENSE.txt)
+[![Gem Version](https://badge.fury.io/rb/langchain.svg)](https://badge.fury.io/rb/langchain)
+[![Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://rubydoc.info/gems/langchain)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/smartiguy0212/langchain/blob/main/LICENSE.txt)
 [![](https://dcbadge.vercel.app/api/server/WDARp7J2n8?compact=true&style=flat)](https://discord.gg/WDARp7J2n8)
 
 
@@ -19,11 +18,11 @@ Langchain.rb is a library that's an abstraction layer on top many emergent AI, M
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add langchainrb
+    $ bundle add langchain
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install langchainrb
+    $ gem install langchain
 
 ## Usage
 
@@ -123,8 +122,6 @@ class Product < ActiveRecord::Base
   after_save :upsert_to_vectorsearch
 end
 ```
-
-Additional info [here](https://github.com/andreibondarev/langchainrb/blob/main/lib/langchain/active_record/hooks.rb#L10-L38).
 
 ### Using Standalone LLMs 🗣️
 
@@ -399,7 +396,7 @@ fix_parser = Langchain::OutputParsers::OutputFixingParser.from_llm(
 fix_parser.parse(llm_response)
 ```
 
-See [here](https://github.com/andreibondarev/langchainrb/tree/main/examples/create_and_manage_prompt_templates_using_structured_output_parser.rb) for a concrete example
+See [here](https://github.com/smartiguy0212/langchain/tree/main/examples/create_and_manage_prompt_templates_using_structured_output_parser.rb) for a concrete example
 
 ### Using Agents 🤖
 Agents are semi-autonomous bots that can respond to user questions and use available to them Tools to provide informed replies. They break down problems into series of steps and define Actions (and Action Inputs) along the way that are executed and fed back to them as additional information. Once an Agent decides that it has the Final Answer it responds with it.
@@ -441,10 +438,6 @@ agent.run(question: "How many users have a name with length greater than 5 in th
 #=> "14 users have a name with length greater than 5 in the users table."
 ```
 
-#### Demo
-![May-12-2023 13-09-13](https://github.com/andreibondarev/langchainrb/assets/541665/6bad4cd9-976c-420f-9cf9-b85bf84f7eaf)
-
-![May-12-2023 13-07-45](https://github.com/andreibondarev/langchainrb/assets/541665/9aacdcc7-4225-4ea0-ab96-7ee48826eb9b)
 
 #### Available Tools 🛠️
 
@@ -489,8 +482,6 @@ Langchain::Loader.load('https://www.example.com/file.pdf')
 | csv    | Langchain::Processors::CSV   |                              |
 | xlsx   | Langchain::Processors::Xlsx  |   `gem "roo", "~> 2.10.0"`   |
 
-## Examples
-Additional examples available: [/examples](https://github.com/andreibondarev/langchainrb/tree/main/examples)
 
 ## Logging
 
@@ -503,7 +494,7 @@ Langchain.logger.level = :info
 
 ## Development
 
-1. `git clone https://github.com/andreibondarev/langchainrb.git`
+1. `git clone https://github.com/smartiguy0212/langchain.git`
 2. `cp .env.example .env`, then fill out the environment variables in `.env`
 3. `bundle exec rake` to ensure that the tests pass and to run standardrb
 4. `bin/console` to load the gem in a REPL session. Feel free to add your own instances of LLMs, Tools, Agents, etc. and experiment with them.
@@ -539,11 +530,11 @@ Join us in the [Langchain.rb](https://discord.gg/WDARp7J2n8) Discord server.
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=andreibondarev/langchainrb&type=Date)](https://star-history.com/#andreibondarev/langchainrb&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=smartiguy0212/langchain&type=Date)](https://star-history.com/#smartiguy0212/langchain&Date)
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/andreibondarev/langchainrb.
+Bug reports and pull requests are welcome on GitHub at https://github.com/smartiguy0212/langchain.
 
 ## License
 
